@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./todo.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"
+      defer
+    ></script>
+
+    <script src="./todo.js" defer></script>
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="container">
+      <div class="head">
+        <h1>todo</h1>
+        <div class="theme-image">
+          <img src="./images/icon-sun.svg" alt="" />
+        </div>
+      </div>
+      <form>
+        <input
+          type="text"
+          class="create-task-input"
+          placeholder="Create a new todo..."
+        />
+      </form>
+
+      <div class="todos">
+        <ul id="simpleList">
+          <!-- <li class="active">
+            <label class="list">
+              <input class="checkbox" type="checkbox" />
+              <span class="text">Fielding</span>
+            </label>
+            <span class="remove"></span>
+          </li> -->
+        </ul>
+      </div>
+      <div class="footer">
+        <div class="count"><span>0</span> items left</div>
+        <div class="filters">
+          <label class="radio">
+            <input
+              type="radio"
+              name="filter"
+              id="all"
+              checked
+            />
+            <span>All</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="filter" id="active" />
+            <span>Active</span>
+          </label>
+          <label class="radio">
+            <input
+              type="radio"
+              name="filter"
+              id="completed"
+            />
+            <span>Completed</span>
+          </label>
+        </div>
+        <div class="clear">Clear Completed</div>
+      </div>
+    </div>
+  </body>
+</html>

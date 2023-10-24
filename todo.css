@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 18px;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: hsl(235, 21%, 11%);
+}
+
+.light {
+  background-color: white;
+}
+.background {
+  background: url('images/bg-desktop-dark.jpg') no-repeat
+    center center/cover;
+  height: 40vh;
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.light .background {
+  background: url('images/bg-desktop-light.jpg') no-repeat
+    center center/cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.container {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: -230px auto 0;
+}
+
+.container .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.container .head h1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 52px;
+  letter-spacing: 2px;
+}
+
+.container form {
+  width: 100%;
+}
+
+.container .create-task-input {
+  width: 100%;
+  background: hsl(235, 21%, 11%);
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  color: whitesmoke;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.todos {
+  width: 100%;
+  background: #25273c;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.224);
+}
+
+#simpleList {
+  text-decoration: none;
+}
+
+#simpleList li {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.224);
+}
+
+.list {
+  display: flex;
+  align-items: center;
+}
+
+.list input[type='checkbox'] {
+  -webkit-appearance: none;
+  border: 1px solid hsl(234, 11%, 52%);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.list input[type='checkbox']:checked {
+  background: url('images/icon-check.svg'),
+    linear-gradient(
+      to right,
+      hsl(192, 100%, 67%),
+      hsl(280, 87%, 65%)
+    );
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+
+.completed .list input[type='checkbox']:checked {
+  background: url('images/icon-check.svg'),
+    linear-gradient(
+      to right,
+      hsl(192, 100%, 67%),
+      hsl(280, 87%, 65%)
+    );
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+
+.text {
+  color: white;
+  font-size: 16px;
+}
+
+.list input[type='checkbox']:checked ~ .text {
+  text-decoration: line-through;
+  color: hsl(234, 11%, 52%);
+}
+
+.completed .list input[type='checkbox']:checked ~ .text {
+  text-decoration: line-through;
+  color: hsl(234, 11%, 52%) !important;
+}
+
+.remove {
+  background: url('images/icon-cross.svg') no-repeat;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  display: none;
+}
+
+#simpleList li:hover .remove {
+  display: block;
+}
+
+#simpleList .hidden {
+  display: none;
+}
+
+.footer {
+  color: hsl(233, 14%, 35%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: hsl(235, 24%, 19%);
+  /* height: 50px; */
+  font-size: 1rem;
+  color: hsl(234, 11%, 52%);
+  padding: 18px;
+  border-radius: 0 0 8px 8px;
+}
+
+.filters input[type='radio'] {
+  opacity: 0;
+}
+
+.filters label:hover {
+  color: hsl(236, 33%, 92%);
+  cursor: pointer;
+}
+
+.filters input[type='radio']:checked + span {
+  color: hsl(220, 98%, 61%);
+}
+
+.clear:hover {
+  color: hsl(236, 33%, 92%);
+  cursor: pointer;
+}
